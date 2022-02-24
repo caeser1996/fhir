@@ -11,10 +11,16 @@
     <!-- FHIR Client JS Library -->
     <script src='./lib/js/fhir-client-v0.1.12.js'></script>
     <script>
-      FHIR.oauth2.authorize({
+      try {
+        FHIR.oauth2.authorize({
         'client_id': '27ddc19a-a9d7-425f-8bbf-279831499628', //Your app client ID
         'scope':  'launch user/*.* openid profile' //'patient/*.read launch'
       });
+      } catch (error) {
+        console.log(error)
+      }
+
+      
     </script>
     <div class="spinner">
       <div class="bounce1"></div>
