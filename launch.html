@@ -14,7 +14,7 @@
       try {
         FHIR.oauth2.authorize({
         'client_id': '27ddc19a-a9d7-425f-8bbf-279831499628', //Your app client ID
-        'scope':  'patient/Patient.read patient/*.read openid profile offline_access patient/Observation.read user/*.read launch patient/*.write fhirUser patient/Observation.write' //'patient/*.read launch'
+        'scope':  'patient/Patient.read online_access openid profile offline_access patient/Observation.read launch fhirUser' //'patient/*.read launch'
       });
       } catch (error) {
         console.log(error)
